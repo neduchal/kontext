@@ -1,0 +1,89 @@
+NZ’s cyber security centre warns more attacks likely following stock market outages 
+
+
+
+The Government Communications Security Bureau has  to all New Zealand businesses to be prepared for cyber-attacks, after almost a week of  on the New Zealand stock exchange (NZX). The attacks are part of worldwide hateful cyber activity and sometimes the NZX’s website service w{3:SHORTANSWER:%100%as#~%100%was#} unavailable for hours. 
+
+The type of attack is known as a Distributed Denial of Service (). The attacker infects large numbers, often thousands or even millions, of computers with a virus that allows the attacker to instruct the infected computer — known as a “bot” — to send thousands of requests for data to the target. In effect, {1:MULTICHOICE:%100%this means millions of attempts to access a website at the same time#~%0%these attacks will become more common and larger in scale#~%0%setting up a “whitelist” of legitimate users and rejecting others#~%0%but are becoming more common#~%0%they are generally set up to demand money from the victims#~%0%government of New Zealand was unable to trace these attackers#~%0%#}. This is particularly damaging for financial information sites such as a stock market as they have a legal duty to give equal access to different users. They would normally shut down and stop trading for a while rather than allow some people to get information before others. These attacks are not designed to steal data or do insider trading. {1:MULTICHOICE:%0%this means millions of attempts to access a website at the same time#~%0%these attacks will become more common and larger in scale#~%0%setting up a “whitelist” of legitimate users and rejecting others#~%0%but are becoming more common#~%100%they are generally set up to demand money from the victims#~%0%government of New Zealand was unable to trace these attackers#~%0%#}, usually asking for thousands of dollars paid in any type of cryptocurrency which is not possible to trace. DDoS software is available on the dark web but it is also not very difficult to write and in many cases the people owning the bots will not be aware anything strange is happening.
+
+Multi-day attacks have been rare {1:MULTICHOICE:%0%this means millions of attempts to access a website at the same time#~%0%these attacks will become more common and larger in scale#~%0%setting up a “whitelist” of legitimate users and rejecting others#~%100%but are becoming more common#~%0%they are generally set up to demand money from the victims#~%0%government of New Zealand was unable to trace these attackers#~%0%#}. The size of these attacks, including how many bots are used and their capacity to send requests, has been increasing. Such multi-day attacks are potentially risky for the attackers as the defence team will be , often using , and should be able to respond more quickly to block illegitimate requests.
+
+The defence against such attacks is based on being able to deal with the large number of requests, e{3:SHORTANSWER:%100%ither#~%100%either#} by moving the website to a cloud-based system that can increase capacity quickly, or identifying bot requests and filtering them out by {1:MULTICHOICE:%0%this means millions of attempts to access a website at the same time#~%0%these attacks will become more common and larger in scale#~%100%setting up a “whitelist” of legitimate users and rejecting others#~%0%but are becoming more common#~%0%they are generally set up to demand money from the victims#~%0%government of New Zealand was unable to trace these attackers#~%0%#}__. This is normally done by firewalls at the level of each computer or the internet service provider or, as in the case of New Zealand, at a country’s electronic border. If an attack is coming from inside New Zealand, security software on the bot computer can normally remove the infection with up-to-date anti-virus software. Internet service providers can also detect this activity and may warn users or disconnect the infected machine until it is cleaned. 
+
+The COVID-19 pandemic means millions of people are working from home around the world, outside their normal corporate security, often using the family computer. Some people may be less careful about downloading software, particularly on illegal streaming sites, and may be using free or unsecured wifi networks. This makes infecting computers to turn them into bots much easier.
+
+In the future, as the internet of things (IoT) becomes more widespread many billions of new devices will be connected to the internet. Security standards are not universal and there is a danger that {1:MULTICHOICE:%0%this means millions of attempts to access a website at the same time#~%100%these attacks will become more common and larger in scale#~%0%setting up a “whitelist” of legitimate users and rejecting others#~%0%but are becoming more common#~%0%they are generally set up to demand money from the victims#~%0%government of New Zealand was unable to trace these attackers#~%0%#}. But defence is possible and both technical and policy approaches are getting better. Artificial intelligence tools for rapidly analysing attacks are the focus of . Support for governments in areas with weak internet security is also increasing in order to implement international agreements, explain local law and share information between network providers.
+
+
+
+
+################################################################################
+1) Five clauses have been removed from the text. Read the text and then fill in the gap. There is one extra clause/ sentence.
+this means millions of attempts to access a website at the same time
+these attacks will become more common and larger in scale
+setting up a “whitelist” of legitimate users and rejecting others
+but are becoming more common
+they are generally set up to demand money from the victims
+government of New Zealand was unable to trace these attackers
+
+ANSWERS: 1A, 2E, 3D, 4C, 5B, 
+
+################################################################################
+2) Fill in the 2 missing words. Each gap should have only ONE word as the answer. The first letter is already given, so provide the rest of your answer with the remaining letters only.
+ANSWERS: (w)as, (e)ither, 
+
+################################################################################
+NZ’s cyber security centre warns more attacks likely following stock market outages 
+source: https://theconversation.com/nzs-cyber-security-centre-warns-more-attacks-likely-following-stock-market-outages-145320
+
+
+
+The Government Communications Security Bureau has  to all New Zealand businesses to be prepared for cyber-attacks, after almost a week of  on the New Zealand stock exchange (NZX). The attacks are part of worldwide hateful cyber activity and sometimes the NZX’s website service was unavailable for hours. 
+
+The type of attack is known as a Distributed Denial of Service (). The attacker infects large numbers, often thousands or even millions, of computers with a virus that allows the attacker to instruct the infected computer — known as a “bot” — to send thousands of requests for data to the target. In effect, this means millions of attempts to access a website at the same time. This is particularly damaging for financial information sites such as a stock market as they have a legal duty to give equal access to different users. They would normally shut down and stop trading for a while rather than allow some people to get information before others. These attacks are not designed to steal data or do insider trading. They are generally set up to demand money from the victims, usually asking for thousands of dollars paid in any type of cryptocurrency which is not possible to trace. DDoS software is available on the dark web but it is also not very difficult to write and in many cases the people owning the bots will not be aware anything strange is happening.
+
+Multi-day attacks have been rare but are becoming more common. The size of these attacks, including how many bots are used and their capacity to send requests, has been increasing. Such multi-day attacks are potentially risky for the attackers as the defence team will be , often using , and should be able to respond more quickly to block illegitimate requests.
+
+The defence against such attacks is based on being able to deal with the large number of requests, either by moving the website to a cloud-based system that can increase capacity quickly, or identifying bot requests and filtering them out by setting up a “whitelist” of legitimate users and rejecting others. This is normally done by firewalls at the level of each computer or the internet service provider or, as in the case of New Zealand, at a country’s electronic border. If an attack is coming from inside New Zealand, security software on the bot computer can normally remove the infection with up-to-date anti-virus software. Internet service providers can also detect this activity and may warn users or disconnect the infected machine until it is cleaned. 
+
+The COVID-19 pandemic means millions of people are working from home around the world, outside their normal corporate security, often using the family computer. Some people may be less careful about downloading software, particularly on illegal streaming sites, and may be using free or unsecured wifi networks. This makes infecting computers to turn them into bots much easier.
+
+In the future, as the internet of things (IoT) becomes more widespread many billions of new devices will be connected to the internet. Security standards are not universal and there is a danger that these attacks will become more common and larger in scale. But defence is possible and both technical and policy approaches are getting better. Artificial intelligence tools for rapidly analysing attacks are the focus of . Support for governments in areas with weak internet security is also increasing in order to implement international agreements, explain local law and share information between network providers.
+
+
+
+
+
+################################################################################
+A“Bot” is:
+is an automated program that runs over the internet.
+a type of internet attack.
+another word for Distributed Denial of Service. 
+ANSWER: A
+
+
+By law, the stock market is obliged to allow equal access to all users.
+True
+False
+ANSWER: A
+
+
+According to the author: 
+it is easy to find bots in your computer.
+bots can be found in your computer using a special kind of software.
+bots could be operating unnoticed in your computer.
+ANSWER: C
+
+
+A “Whitelist” of legitimate users can be useful for:
+increasing cloud capacity.
+tracing and separating bot requests.
+helping firewall systems.
+ANSWER: B
+
+
+According to the text, security standards will need to be improved in the future.
+True
+False
+ANSWER: A
+
