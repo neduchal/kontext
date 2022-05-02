@@ -42,7 +42,7 @@ def translate(filename):
             break
 
     first_task_text = first_task[0]
-    first_task_options = first_task[1:-2]
+    first_task_options = first_task[1:-1]
     first_task_answers = []    
     for t in first_task[1:]:
         if t.find("ANSWERS:") != -1:
