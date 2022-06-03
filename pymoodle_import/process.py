@@ -10,7 +10,7 @@ output_dir = "./output"
 
 
 def translate(filename):
-
+    print(filename)
     document =  Document(filename)
 
     cloze_text = []
@@ -22,10 +22,8 @@ def translate(filename):
 
     for par in document.paragraphs:
         for run_idx, r in enumerate(par.runs):
-
             if (r.bold == True):
                 state = state + 1
-
             if (state == 0):
                 if  (par.text[0:6] != "source"):
                     cloze_text.append(par.text)
@@ -51,7 +49,6 @@ def translate(filename):
 
     for i, item in enumerate(first_task_options):
         if item[0:2] in ["a)", "b)", "c)", "d)", "e)", "f)", "1)", "2)", "3)", "4)", "5)", "6)", "1.", "2.", "3.", "4.", "5.", "6." ]:
-            print("OK")
             if item[2] == " ":
                 first_task_options[i] = item[3:] 
             else:
