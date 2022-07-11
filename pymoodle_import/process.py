@@ -30,9 +30,10 @@ def translate(filename, without_short=False):
                 if without_short and state == 2:
                     state = state + 1
             if (state == 0):
-                if  (par.text[0:6] != "source"):
+                if  (par.text[0:6].lower() != "source") :
                     cloze_text.append(par.text)
             elif (state == 1) : 
+                print(state)
                 first_task.append(par.text)
             elif (state == 2) : 
                 second_task.append(par.text)
@@ -44,6 +45,10 @@ def translate(filename, without_short=False):
                 questions.append(par.text)
             break
 
+    print(cloze_text)
+    print(first_task)
+    print(second_task)
+    print(completed_text)
     first_task_text = first_task[0]
     first_task_options = first_task[1:-1]
     for i in range(len(first_task_options)-1, 0, -1):
@@ -52,7 +57,8 @@ def translate(filename, without_short=False):
             first_task_options.pop(i)
 
 
-    first_task_answers = []    
+    first_task_answers = [] 
+    print(first_task)   
     for t in first_task[1:]:
         if t.find("ANSWERS:") != -1:
             first_task_answers = t.split(":")[1].split()
@@ -94,6 +100,8 @@ def translate(filename, without_short=False):
             if  (index != -1):
                 index2 = index +2
                 for j in range(25):
+                    if len(cloze_text[i]) <= index2:
+                        break
                     if  cloze_text[i][index2] == "_":
                         index2 = index2+1
                     else:
@@ -101,6 +109,7 @@ def translate(filename, without_short=False):
                 cloze_text[i] = cloze_text[i].replace(str(qn) + ")" + (index2 - (index +2))*"_", "") 
 
                 answer_str = "{1:MULTICHOICE:"
+                print(q, first_task_answers)
                 right_answer = first_task_answers[q]
                 for op_i in range(len(first_task_options)):
                     if op_i > 0:
@@ -174,6 +183,8 @@ if __name__ == "__main__":
         index = -1
         a = ["A. ", "B. ", "C. ", "D. ", "E. "]
         for row in questions:
+            if len(row) == 0:
+                continue
             if row.find("ANSWER:") != -1:
                 index = -1
                 of.write(row + "\n") 
