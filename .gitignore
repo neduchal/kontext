@@ -130,3 +130,7 @@ dmypy.json
 
 input/
 output/
+
+
+pymoodle_import/input/
+pymoodle_import/output/
