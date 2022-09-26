@@ -134,3 +134,5 @@ output/
 
 pymoodle_import/input/
 pymoodle_import/output/
+pymoodle_import/output2/
+pymoodle_import/vstupy/
