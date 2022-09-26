@@ -24,31 +24,40 @@ def translate(filename, without_short=False):
     second_task_words = [] 
 
     for par in document.paragraphs:
+        if len(par.text) == 0 or par.text == "\n":
+                continue
+        add_source = 0    
+
         for run_idx, r in enumerate(par.runs):
             if (r.bold == True):
+                print(par.text)
                 state = state + 1
                 if without_short and state == 2:
                     state = state + 1
-            if (state == 0):
-                if  (par.text[0:6].lower() != "source") :
-                    cloze_text.append(par.text)
-            elif (state == 1) : 
-                print(state)
-                first_task.append(par.text)
-            elif (state == 2) : 
-                second_task.append(par.text)
-            elif (state == 3) : 
-                completed_text.append(par.text) 
-                if (len(completed_text) == len(cloze_text)+1):
-                    state = state + 1 
-            elif(state == 4):
-                questions.append(par.text)
-            break
-
-    print(cloze_text)
-    print(first_task)
-    print(second_task)
-    print(completed_text)
+                break
+        if (state == 0):
+            if  (par.text[0:6].lower() == "source") :
+                continue
+            cloze_text.append(par.text)
+        elif (state == 1) : 
+            first_task.append(par.text)
+        elif (state == 2) : 
+            second_task.append(par.text)
+        elif (state == 3) : 
+            completed_text.append(par.text)
+            if (par.text == "Source:"):
+                add_source = 1 
+            if (len(completed_text) == len(cloze_text)+1+add_source):
+                state = state + 1 
+        elif(state == 4):
+            questions.append(par.text)
+            
+    #print(len(cloze_text), len(completed_text))
+    #print(cloze_text)
+    #print(first_task)
+    #print(second_task)
+    #print(completed_text)
+    #print(cloze_text)
     first_task_text = first_task[0]
     first_task_options = first_task[1:-1]
     for i in range(len(first_task_options)-1, 0, -1):
@@ -58,7 +67,7 @@ def translate(filename, without_short=False):
 
 
     first_task_answers = [] 
-    print(first_task)   
+    #print(first_task)   
     for t in first_task[1:]:
         if t.find("ANSWERS:") != -1:
             first_task_answers = t.split(":")[1].split()
@@ -99,7 +108,7 @@ def translate(filename, without_short=False):
                     cloze_text[i] = cloze_text[i][0:index+2] + "_" +  cloze_text[i][index+3:]
             if  (index != -1):
                 index2 = index +2
-                for j in range(25):
+                for j in range(100):
                     if len(cloze_text[i]) <= index2:
                         break
                     if  cloze_text[i][index2] == "_":
@@ -160,7 +169,7 @@ if __name__ == "__main__":
         for option in first_task_options:
             of.write(option  + "\n")
         of.write("ANSWERS: ")          
-        print(first_task_options)  
+        #print(first_task_options)  
         for i, answer in enumerate(first_task_answers):
             of.write(str(i+1)  +  alphabet[answer])
             if i < len(first_task_answers):
