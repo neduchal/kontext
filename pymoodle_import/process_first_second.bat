@@ -1,1 +1,1 @@
-python process2.py true
+python process.py true
