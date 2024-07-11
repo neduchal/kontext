@@ -61,7 +61,9 @@ def translate(filename, without_short=False):
             completed_text.append(par.text)
             if (par.text[0:7].lower() == "source:"):
                 add_source = 1 
-            if (len(completed_text) == len(cloze_text)+1+add_source):
+            if par.text.strip() == "Here is the text without gaps.":
+                add_source = add_source+1
+            if (len(completed_text) == len(cloze_text)+add_source):
                 state = state + 1 
         elif(state == 4):
             # Zpracování otázek
@@ -105,8 +107,9 @@ def translate(filename, without_short=False):
                 first_task_options[i] = item[2:]
 
     # Získání čísel odpovědí (indexů v poli)
-    alphabet = "ABCDEF"
+    alphabet = "ABCDEFGH"
     for i in range(len(first_task_answers)):
+        print(first_task_answers[i])
         first_task_answers[i] = alphabet.index(first_task_answers[i][1])
 
     # Zpracování druhé úlohy, pokud není vynechána
@@ -181,7 +184,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "true":
         without_short = True
     files = glob.glob(os.path.join(input_dir, "*.docx"))
-    alphabet = "ABCDEF"
+    alphabet = "ABCDEFGH"
     
     # Zpracování každého souboru
     for f in files:
