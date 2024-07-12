@@ -41,7 +41,7 @@ def translate(filename, without_short=False):
                 state = state + 1
                 first_task.append(par.text)
                 continue     
-            cloze_text.append(par.text)
+            cloze_text.append(par.text.replace('“', '"').replace('”', '"'))
         elif (state == 1) : 
             # Zpracování první úlohy            
             first_task.append(par.text)
@@ -58,7 +58,7 @@ def translate(filename, without_short=False):
             # Zpracování kompletního textu            
             if (len(par.text) == 1):
                 continue
-            completed_text.append(par.text)
+            completed_text.append(par.text.replace('“', '"').replace('”', '"'))
             if (par.text[0:7].lower() == "source:"):
                 add_source = 1 
             if par.text.strip() == "Here is the text without gaps.":
@@ -124,6 +124,7 @@ def translate(filename, without_short=False):
             second_task_answers.append(word[1])
             second_task_answers.append(word.split(")")[1])
             second_task_answers.append(word.replace("(","").replace(")",""))
+        print(second_task_answers)
 
     # MULTICHOICE
     for q in range(5):
@@ -176,6 +177,7 @@ def translate(filename, without_short=False):
                     index = index + 1 
                     answer_str = "{3:SHORTANSWER:%100%"+second_task_answers[w_i + 1]+"#~%100%"+second_task_answers[w_i + 2]+"#}"
                     cloze_text[i] = cloze_text[i][0:index] + answer_str + cloze_text[i][index:]
+                    break
 
     return cloze_text, first_task_text, first_task_options, first_task_answers, second_task_text, second_task_words, completed_text, questions
 
