@@ -15,6 +15,11 @@ def translate(filename, without_short=False):
     print(filename)
     document =  Document(filename)
     
+    if os.path.basename(filename.replace(" ","")).find("R1,2") != -1:
+        without_short = True
+    else:
+        without_short == False
+    
     # Inicializace seznamů pro různé části textu
     cloze_text = []        # Text s vynechanými částmi
     first_task = []        # První úloha
@@ -41,7 +46,7 @@ def translate(filename, without_short=False):
                 state = state + 1
                 first_task.append(par.text)
                 continue     
-            cloze_text.append(par.text.replace('“', '"').replace('”', '"'))
+            cloze_text.append(par.text.replace('“', '"').replace('”', '"').replace("’", "'"))
         elif (state == 1) : 
             # Zpracování první úlohy            
             first_task.append(par.text)
@@ -58,7 +63,7 @@ def translate(filename, without_short=False):
             # Zpracování kompletního textu            
             if (len(par.text) == 1):
                 continue
-            completed_text.append(par.text.replace('“', '"').replace('”', '"'))
+            completed_text.append(par.text.replace('“', '"').replace('”', '"').replace("’", "'"))
             if (par.text[0:7].lower() == "source:"):
                 add_source = 1 
             if par.text.strip() == "Here is the text without gaps.":
